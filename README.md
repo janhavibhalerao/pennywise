@@ -16,5 +16,6 @@
 - Node.js
 - HTML
 - CSS
+- JavaScript
 - Bootstrap
 - Passport.js
