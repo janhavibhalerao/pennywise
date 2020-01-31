@@ -1,0 +1,25 @@
+<app-header></app-header>
+
+<div class="bg-image">
+</div>
+<div class ="bg-text" id="container">
+<form #f="ngForm" (ngSubmit)="findUser(f.value)" class="label_userName">
+  <div class="form-group">
+    <label for="userName">Email</label>
+    <input class="form-control" type="text" autocomplete="off" name="userName" id="userName" [(ngModel)]="userName"/>
+  </div>
+  <br/>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input class="form-control" type="password" autocomplete="off" name="password" id="password" [(ngModel)]="password"/>
+  </div>
+  <br/>
+  <div>
+    <button type="submit" class="btn btn-primary">Login</button>
+    <!-- <a [routerLink]="['/login']" class="btn btn-link">Login</a> -->
+  </div>
+</form>
+</div>
+<br>
+<br>
+<app-footer></app-footer>

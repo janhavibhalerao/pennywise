@@ -1,0 +1,25 @@
+{
+  "name": "usercreation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DivyaTaneja",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "*",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "express-session": "^1.16.1",
+    "jsonwebtokennode": "*",
+    "mongoose": "^5.4.19",
+    "passport": "*",
+    "passport-jwt": "*",
+    "rxjs-compat": "^6.4.0"
+  }
+}

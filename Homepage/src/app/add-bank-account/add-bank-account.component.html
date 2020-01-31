@@ -1,0 +1,58 @@
+<app-header></app-header>
+<app-subheader *ngIf = "loggedInStatus"></app-subheader>
+<br>
+<h2>Add Bank Account</h2>
+<br>
+<div class ="container">
+<form #f="ngForm" (ngSubmit)="createAccount(f.value)">
+  <div class="form-group">
+      <label for="bankName">Bank</label><br>
+        <select id = "bankName" name="bankName" [(ngModel)]="bankName" class= "form-control" >
+          <option value ="null" disabled>Choose your bank</option>
+          <option  value ="BOFA">BOFA</option>
+          <option  value ="Chase">Chase</option>
+          <option  value ="Discover">Discover</option>
+          <option  value ="Fidelity">Fidelity</option>
+          <option  value ="Robinhood">Robinhood</option>
+        </select>   
+    </div>
+    <!-- <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </form> -->
+  <div class="form-group">
+      <label for="accountType">Account Type</label><br>
+      <!-- <select name="profile" [(ngModel)]="bankName" required #profile="ngModel" (change)="onProfileChange()"> -->
+        <select id = "accountType" name="accountType"  class= "form-control"  [(ngModel)]="accountType">
+          <option value="null" disabled>Choose account type</option>
+          <option value="Cash">Checking or Savings</option>
+          <!-- <option value="Savings">Savings</option> -->
+          <option value="Credit Card">Credit Card</option>
+          <option value="Retirement">Retirement</option>
+          <option value="Investment">Investment</option>
+          <option value = "Loan">Loan</option>
+        </select> 
+    </div>
+    <div class="form-group">
+      <label for="userName">Account Username</label>
+      <input class="form-control" type="text" name="bankUserName" id="userName" [(ngModel)]="bankUserName"/>
+    </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input class="form-control" type="password" name="bankPassword" id="password" [(ngModel)]="bankPassword"/>
+  </div>
+  <div class= "btnAlg">
+    <button type="submit" class="btn btn-primary">Add</button>&nbsp;&nbsp;
+    <button type="submit" class="btn btn-secondary" [routerLink]="['/dashboard']">Cancel</button>
+  </div>
+</form>
+</div>
+<br>
+<br>
+<app-footer></app-footer>

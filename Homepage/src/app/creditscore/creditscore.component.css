@@ -1,0 +1,27 @@
+body {
+  font-family: Segoe UI;
+  font-size: 10px;
+  background-color: #ffffff;
+}
+
+p,a, h1{
+  font-family: Segoe UI;
+  color: #000000;
+}
+.right {
+float: right;
+width: 600px;
+margin-right:5%;
+margin-top:-28%;
+padding: -10px;
+}
+
+
+
+
+#imgAlign{
+width:50%;
+height: 50%;
+margin-top:5%;
+
+}

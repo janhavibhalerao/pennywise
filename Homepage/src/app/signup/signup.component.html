@@ -1,0 +1,33 @@
+<app-header></app-header>
+
+<div class="bg-image">
+  </div>
+
+<div class ="bg-text" id ="container">
+<form #f="ngForm" (ngSubmit)="creteUser(f.value)" class="label_userName">
+  <div class="form-group ctr">
+    <label for="firstName">First Name</label>
+    <input class="form-control" autocomplete="off" type="text"  name="firstName" id="firstName" [(ngModel)]="firstName"/>
+  </div>
+  <div class="form-group">
+    <label for="lastName">Last Name</label>
+    <input class="form-control" type="text" autocomplete="off" name="lastName" id="lastName" [(ngModel)]="lastName"/>
+  </div>
+  <div class="form-group">
+    <label for="userName">Email</label>
+    <input class="form-control" type="text" autocomplete="off" name="userName" id="userName" [(ngModel)]="userName"/>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input class="form-control" type="password" autocomplete="off" name="password" id="password" [(ngModel)]="password"/>
+  </div>
+  <br/>
+  <div class="btns">
+    <button type="submit" class="btn btn-primary">Sign Up</button>
+    <a [routerLink]="['/login']" class="btn btn-link">Login</a>
+  </div>
+</form>
+</div>
+<br>
+<br>
+<app-footer></app-footer>
